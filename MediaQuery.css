@@ -1,0 +1,280 @@
+/* Flex Layout */
+body{
+   
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   /*justify-content: space-around;*/ 
+   margin: 0;
+   padding: 0;
+   min-width: 320px;
+   /*max-width: 1280px;*/
+  
+}
+a#navicon {
+   display: none;
+}
+
+
+header{
+   position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+   flex: 1 1 100%;
+   margin: 0;
+   overflow: hidden;
+   background-color: white;
+}
+
+.head_call {
+   position: absolute;
+  top: 10px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 1.8em;
+  color: rgb(0, 0, 0);
+}
+
+.iconcall{
+   position: absolute;
+   top: 8px;
+   right: 220px;
+}
+
+.head_email {
+   position: absolute;
+  top: 50px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 1.8em;
+  color: rgb(0, 0, 0);
+}
+
+.iconemail {
+  position: absolute;
+   top: 50px;
+   right: 290px; 
+}
+
+
+img#logo {
+    display: inline-flex;
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+nav {
+   background-color: rgb(102, 102, 200);
+   flex:1 1 100%;
+   padding: 0 40px;
+}
+
+nav ul li{
+   display: flex;
+   width: 100%;
+}
+
+nav ul li a{
+   display: flex;
+
+}
+
+p {
+   margin: 10px 0px 10px 0px;
+   padding-right: 10px;
+}
+
+h2{
+   margin: 10px 10px 0px 0px ;
+   padding-top: 7px;
+}
+
+
+aside{
+ 
+ flex: 1 1 25%;
+ height: 50%;
+ margin: 2%  2% auto auto;
+/*justify-content: flex-end; */ /*center left or right*/
+/*align-items: flex-start; */ /*put it center up or bottom*/
+/*height: 120px;*/
+}
+aside > p{
+   padding: auto auto auto 2px;
+}
+
+section#main {
+   -webkit-flex: 1 1 70%;
+   flex: 1 1 70%;
+   margin: 10px 12px;
+   padding: 2px auto; 
+}
+
+.flex-item {
+   display: flex;
+   margin: 3px;
+   padding: 10px 0 0 10px;
+}
+.first_row {
+
+   -webkit-flex: 1 1 40%;
+   flex: 1 1 40%;
+}
+
+.first_text {
+   
+   -webkit-flex: 1 1 50%;
+   flex: 1 1 50%;
+}
+
+section#main p {
+   -webkit-align-items: flex-end;
+   align-items: flex-end;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+section#main2 {
+   flex: 1 1 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+/* photo bottoms style */
+.botom {
+   margin: 0.9em;
+   padding: 0.9em;
+}
+
+.fotobotom {
+   text-align: center;
+}
+.clean {
+   margin-top: 10px;
+}
+
+ footer {
+   flex: 1 1 100%;
+}
+footer > p > a {
+   text-decoration: none;
+}
+
+div#formRow {
+   -webkit-flex: 1 0 auto;
+   flex: 1 0 auto;
+}
+
+/* Customer Comment Styles */
+ ul#comments {
+   width: 75%;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   margin-left: auto;
+   margin-right: auto;  
+}
+
+ul#comments li{
+   display: block;
+   width: 100%;
+   float: left;
+   margin-bottom: 30px;
+}
+
+ul#comments img{
+   display: block;
+   width: 10%;
+   float: left;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+ul#comments > p{
+   float: left;
+   width: 60px;
+}
+
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   section#main {
+      width: 100%;
+   }
+   
+   section#main2 {
+      width: 100%;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   .fotobotom {
+      font-size: 2em;
+   }
+   
+   a#navicon {
+      display: -webkit-flex;
+      display: flex; 
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: auto;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+      
+   }
+   #title_botom {
+    text-align:center; 
+    font-size: 1.7em
+ }
+
+ footer{
+   font-size: 1.5em;
+ }
+
+ .head_email, .iconemail {
+   display: none;
+ }
+
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+   section#main {
+      float: left;
+      width: 70%;
+   }
+   
+   section#main2 {
+      float: left;
+      width: 30%;
+   }
+   
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+}
